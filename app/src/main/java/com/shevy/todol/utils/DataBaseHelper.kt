@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.shevy.todol.model.ToDoModel
 
-
 class DataBaseHelper(context: Context?) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, 1) {
 
