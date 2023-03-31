@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.recyclerview.widget.RecyclerView
+import com.shevy.todol.AddNewTask
 import com.shevy.todol.MainActivity
 import com.shevy.todol.R
 import com.shevy.todol.model.ToDoModel
@@ -39,6 +40,10 @@ class ToDoAdapter(private val myDB: DataBaseHelper, private val activity: MainAc
         return num != 0
     }
 
+    fun getContext(): Context? {
+        return activity
+    }
+
     @SuppressLint("NotifyDataSetChanged")
     fun setTasks(mList: ArrayList<ToDoModel>?) {
         this.mList = mList
@@ -57,9 +62,9 @@ class ToDoAdapter(private val myDB: DataBaseHelper, private val activity: MainAc
         val bundle = Bundle()
         bundle.putInt("id", id)
         bundle.putString("task", task1)
-        //val task = AddNewTask()
-        //task.setArguments(bundle)
-        //task.show(activity.supportFragmentManager, task.getTag())
+        val task = AddNewTask()
+        task.arguments = bundle
+        task.show(activity.supportFragmentManager, task.tag)
     }
 
     override fun getItemCount(): Int {

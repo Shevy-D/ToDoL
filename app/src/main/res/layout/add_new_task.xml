@@ -5,6 +5,8 @@
 
     <EditText
         android:id="@+id/editTextANT"
+        android:imeOptions="actionGo"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter New Task"

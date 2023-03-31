@@ -49,7 +49,7 @@ class DataBaseHelper(context: Context?) :
         db?.delete(TABLE_NAME, "ID=?", arrayOf(id.toString()))
     }
 
-    val allTasks: List<ToDoModel>
+    val allTasks: ArrayList<ToDoModel>
         @SuppressLint("Range")
         get() {
             db = this.writableDatabase
@@ -73,7 +73,7 @@ class DataBaseHelper(context: Context?) :
                 db?.endTransaction()
                 cursor?.close()
             }
-            return modelList
+            return modelList as ArrayList<ToDoModel>
         }
 
     companion object {
