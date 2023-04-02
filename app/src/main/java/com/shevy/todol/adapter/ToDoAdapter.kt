@@ -20,6 +20,7 @@ class ToDoAdapter(private val myDB: DataBaseHelper, private val activity: MainAc
 
     private var mList: ArrayList<ToDoModel>? = null
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.task_layout, parent, false)
         return MyViewHolder(view)
