@@ -40,7 +40,7 @@ class ToDoAdapter(private val myDB: DataBaseHelper, private val activity: MainAc
         return num != 0
     }
 
-    fun getContext(): Context? {
+    fun getContext(): Context {
         return activity
     }
 
