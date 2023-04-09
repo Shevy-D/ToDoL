@@ -24,10 +24,10 @@ class RecyclerViewTouchHelper(private val adapter: ToDoAdapter) :
         val position = viewHolder.adapterPosition
         if (direction == ItemTouchHelper.RIGHT) {
             val builder: AlertDialog.Builder = AlertDialog.Builder(adapter.getContext())
-            builder.setTitle("Delete Task")
-            builder.setMessage("Are You Sure ?")
-            builder.setPositiveButton("Yes") { _, _ -> adapter.deleteTask(position) }
-            builder.setNegativeButton("Cancel") { _, _ -> adapter.notifyItemChanged(position) }
+            builder.setTitle(R.string.delete_taks)
+            builder.setMessage(R.string.are_you_sure)
+            builder.setPositiveButton(R.string.yes) { _, _ -> adapter.deleteTask(position) }
+            builder.setNegativeButton(R.string.cancel) { _, _ -> adapter.notifyItemChanged(position) }
             val dialog: AlertDialog = builder.create()
             dialog.setCanceledOnTouchOutside(false)
             dialog.show()
@@ -46,7 +46,7 @@ class RecyclerViewTouchHelper(private val adapter: ToDoAdapter) :
         isCurrentlyActive: Boolean
     ) {
 
-        adapter.getContext().let { ContextCompat.getColor(it, R.color.colorPrimaryDark) }?.let {
+        adapter.getContext().let { ContextCompat.getColor(it, R.color.colorPrimaryDark) }.let {
             RecyclerViewSwipeDecorator.Builder(
                 c,
                 recyclerView,

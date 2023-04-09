@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ToDoL</string>
+    <string name="to_do_list">To Do List</string>
+    <string name="enter_new_task">Enter new task</string>
+    <string name="add">Add</string>
+    <string name="string_is_empty">String is empty</string>
+</resources>

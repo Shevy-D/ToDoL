@@ -1,7 +1,11 @@
 <resources>
-    <string name="app_name">ToDoL</string>
-    <string name="to_do_list">Список задач</string>
-    <string name="enter_new_task">Введите новую задачу</string>
-    <string name="add">Добавить</string>
-    <string name="string_is_empty">Вы ничего не ввели</string>
+    <string name="app_name" translatable="false">ToDoL</string>
+    <string name="to_do_list">To Do List</string>
+    <string name="enter_new_task">Enter new task</string>
+    <string name="add">Add</string>
+    <string name="string_is_empty">String is empty</string>
+    <string name="delete_taks">Delete task</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
 </resources>
