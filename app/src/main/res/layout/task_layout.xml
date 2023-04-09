@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:buttonTint="@color/colorPrimaryDark"
             android:paddingStart="8dp"
-            android:text="This is Task 1" />
+            android:textSize="17sp"
+            tools:text="This is Task 1" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

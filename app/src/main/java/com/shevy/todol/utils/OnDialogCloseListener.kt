@@ -1,4 +1,4 @@
-package com.shevy.todol
+package com.shevy.todol.utils
 
 import android.content.DialogInterface
 

@@ -1,4 +1,4 @@
-package com.shevy.todol
+package com.shevy.todol.utils
 
 import android.app.AlertDialog
 import android.graphics.Canvas
@@ -6,6 +6,7 @@ import android.graphics.Color
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.shevy.todol.R
 import com.shevy.todol.adapter.ToDoAdapter
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 
@@ -31,7 +32,7 @@ class RecyclerViewTouchHelper(private val adapter: ToDoAdapter) :
             dialog.setCanceledOnTouchOutside(false)
             dialog.show()
         } else {
-            adapter.editItem(position)
+            adapter.editTask(position)
         }
     }
 
@@ -45,7 +46,7 @@ class RecyclerViewTouchHelper(private val adapter: ToDoAdapter) :
         isCurrentlyActive: Boolean
     ) {
 
-        adapter.getContext()?.let { ContextCompat.getColor(it, R.color.colorPrimaryDark) }?.let {
+        adapter.getContext().let { ContextCompat.getColor(it, R.color.colorPrimaryDark) }?.let {
             RecyclerViewSwipeDecorator.Builder(
                 c,
                 recyclerView,
@@ -55,12 +56,11 @@ class RecyclerViewTouchHelper(private val adapter: ToDoAdapter) :
                 actionState,
                 isCurrentlyActive
             )
-                .addSwipeLeftBackgroundColor(
-                    it
-                )
-                .addSwipeLeftActionIcon(R.drawable.ic_baseline_edit)
+                .addSwipeLeftBackgroundColor(it)
+                .addSwipeLeftActionIcon(R.drawable.ic_edit)
                 .addSwipeRightBackgroundColor(Color.RED)
-                .addSwipeRightActionIcon(R.drawable.ic_baseline_delete)
+                .addCornerRadius(1, 8)
+                .addSwipeRightActionIcon(R.drawable.ic_delete)
                 .create()
                 .decorate()
         }

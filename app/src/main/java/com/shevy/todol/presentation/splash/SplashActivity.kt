@@ -1,11 +1,12 @@
-package com.shevy.todol
+package com.shevy.todol.presentation.splash
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-
+import com.shevy.todol.presentation.main.MainActivity
+import com.shevy.todol.R
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
@@ -17,6 +18,6 @@ class SplashActivity : AppCompatActivity() {
         handler.postDelayed({
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             finish()
-        }, 1500)
+        }, 500)
     }
 }

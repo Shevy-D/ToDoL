@@ -4,6 +4,7 @@
     package="com.shevy.todol">
 
     <application
+        android:name=".di.MainApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,15 +15,18 @@
         android:theme="@style/Theme.ToDoL"
         tools:targetApi="31">
         <activity
-            android:name=".SplashActivity"
-            android:exported="true">
+            android:name=".presentation.splash.SplashActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.main.MainActivity"
             android:exported="false" />
     </application>
 
