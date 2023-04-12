@@ -2,7 +2,7 @@
 ---
 <img align="left" alt="Screen1" width="150px" src="https://user-images.githubusercontent.com/96663113/230769218-4a732fef-2e6d-4c35-87ca-69c91f68ac04.png" /> The simple application for recording short tasks.
 <br/>
-[<img align="left" alt="Google play" width="300px" src="https://user-images.githubusercontent.com/96663113/201872058-31ce2a2f-8aaf-458a-8428-2e82d59e44a8.png"/>](https://play.google.com/store/apps/details?id=com.shevy.gifapp)
+[<img align="left" alt="Google play" width="300px" src="https://user-images.githubusercontent.com/96663113/201872058-31ce2a2f-8aaf-458a-8428-2e82d59e44a8.png"/>](https://play.google.com/store/apps/details?id=com.shevy.todol)
 
 <br/>
 <br/>
