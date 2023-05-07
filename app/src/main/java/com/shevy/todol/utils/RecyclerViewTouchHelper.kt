@@ -24,13 +24,19 @@ class RecyclerViewTouchHelper(private val adapter: ToDoAdapter) :
         val position = viewHolder.adapterPosition
         if (direction == ItemTouchHelper.RIGHT) {
             val builder: AlertDialog.Builder = AlertDialog.Builder(adapter.getContext())
-            builder.setTitle(R.string.delete_taks)
-            builder.setMessage(R.string.are_you_sure)
-            builder.setPositiveButton(R.string.yes) { _, _ -> adapter.deleteTask(position) }
-            builder.setNegativeButton(R.string.cancel) { _, _ -> adapter.notifyItemChanged(position) }
+            builder.apply {
+                setTitle(R.string.delete_taks)
+                setMessage(R.string.are_you_sure)
+                setPositiveButton(R.string.yes) { _, _ -> adapter.deleteTask(position) }
+                setNegativeButton(R.string.cancel) { _, _ -> adapter.notifyItemChanged(position) }
+            }
+
             val dialog: AlertDialog = builder.create()
-            dialog.setCanceledOnTouchOutside(false)
-            dialog.show()
+            dialog.apply {
+                setCanceledOnTouchOutside(false)
+                setCancelable(false)
+                show()
+            }
         } else {
             adapter.editTask(position)
         }
